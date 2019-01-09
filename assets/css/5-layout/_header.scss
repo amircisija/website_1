@@ -1,0 +1,139 @@
+header {
+    position: relative;
+    background-color: black;
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+
+    .header__display {
+        display: block;
+        font-family: Roboto;
+    }
+
+    .display-1 {
+        font-weight: 600;
+    }
+
+    .display-4 {
+        font-weight: 300;
+    }
+
+    p {
+        color: #fff;
+        font-weight: 300;
+        font-size: 1.4em;
+    }
+
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.9;
+    z-index: 1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#245de7+0,b41aa2+100 */
+    background: #245de7;
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #245de7 0%, #b41aa2 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #245de7 0%, #b41aa2 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #245de7 0%, #b41aa2 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#245de7', endColorstr='#b41aa2', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+}
+
+
+
+
+
+
+article {
+    padding: 24px;
+    margin: 60px auto;
+    transition: 0.2s ease-out;
+
+    .open & {
+        transform: scale(0.92);
+        transition: transform 0.2s 0.41s ease-out;
+    }
+}
+
+@keyframes menu-animation {
+    0% {
+        opacity: 0;
+        transform: scale(0.04) translateY(300%);
+    }
+
+    40% {
+        transform: scale(0.04) translateY(0);
+        transition: ease-out;
+    }
+
+    40% {
+        transform: scale(0.04) translateY(0);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(0.02) translateY(0px);
+    }
+
+    61% {
+        transform: scale(0.04);
+    }
+
+    99.9% {
+        height: 0;
+        padding-bottom: 100%;
+        border-radius: 100%;
+    }
+
+    100% {
+        transform: scale(2);
+        height: 100%;
+        padding-bottom: 0;
+        border-radius: 0;
+    }
+}
+
+button:focus {
+    outline: none;
+}
+
+.logo__holder {
+    position: fixed;
+    top: 14px;
+    left: 24px;
+    z-index: 999999999;
+
+    img {
+        width: 140px;
+    }
+}
